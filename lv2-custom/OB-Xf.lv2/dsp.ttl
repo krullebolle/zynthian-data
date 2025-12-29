@@ -34,7 +34,8 @@ plug:Transpose
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum -24 ;
-	lv2:maximum 24 .
+	lv2:maximum 24 ;
+    rdfs:comment "Transpose overall sound per note" .
 
 plug:Tune
 	a lv2:Parameter ;
@@ -42,7 +43,8 @@ plug:Tune
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum -100 ;
-	lv2:maximum 100 .
+	lv2:maximum 100 ;
+    rdfs:comment "Fine tuning the overall pitch in cents" .
 
 plug:Polyphony
 	a lv2:Parameter ;
@@ -56,9 +58,19 @@ plug:HQMode
 	a lv2:Parameter ;
 	rdfs:label "High Quality Mode" ;
 	rdfs:range atom:Float ;
+	rdfs:comment "THigh Quality mode at the expense of CPU consumption." ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:UnisonVoices
 	a lv2:Parameter ;
@@ -74,7 +86,16 @@ plug:Portamento
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0.0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1.0 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ] .
 
 plug:Unison
 	a lv2:Parameter ;
@@ -82,7 +103,16 @@ plug:Unison
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0.0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1.0 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:UnisonDetune
 	a lv2:Parameter ;
@@ -98,7 +128,24 @@ plug:EnvLegatoMode
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 3 .
+	lv2:maximum 3 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Keep All" ;
+            rdfs:comment "Keep All" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Filtr Env" ;
+            rdfs:comment "Filter Envelope" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Amp Env" ;
+            rdfs:comment "Amplifier Envelope" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "Retrig" ;
+            rdfs:comment "Retrigger" ;
+        ] .
 
 plug:NotePriority
 	a lv2:Parameter ;
@@ -298,7 +345,8 @@ plug:PitchBendUp
 	rdfs:range atom:Float ;
 	lv2:default 2 ;
 	lv2:minimum 0 ;
-	lv2:maximum 48 .
+	lv2:maximum 48 ;
+	rdfs:comment "Pitchbend upwards up to 4 octaves" .
 
 plug:PitchBendDown
 	a lv2:Parameter ;
@@ -306,7 +354,8 @@ plug:PitchBendDown
 	rdfs:range atom:Float ;
 	lv2:default 2 ;
 	lv2:minimum 0 ;
-	lv2:maximum 48 .
+	lv2:maximum 48 ;
+	rdfs:comment "Pitchbend downwards up to 4 octaves" .
 
 plug:BendOsc2Only
 	a lv2:Parameter ;
@@ -314,7 +363,16 @@ plug:BendOsc2Only
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:VibratoWave
 	a lv2:Parameter ;
@@ -322,7 +380,16 @@ plug:VibratoWave
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "SINE" ;
+            rdfs:comment "SINE" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "SQUARE" ;
+            rdfs:comment "SQUARE" ;
+        ].
 
 plug:VibratoRate
 	a lv2:Parameter ;
