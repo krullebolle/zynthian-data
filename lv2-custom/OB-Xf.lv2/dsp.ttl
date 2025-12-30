@@ -101,15 +101,16 @@ plug:Unison
 	a lv2:Parameter ;
 	rdfs:label "Unison" ;
 	rdfs:range atom:Float ;
+	rdfs:comment "Single-note mode that stacks all the voices available. Spread and Voice Panning are assets in this mode" ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
 	lv2:scalePoint [
-            rdf:value 0.0 ;
+            rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
         ], [
-            rdf:value 1.0 ;
+            rdf:value 1 ;
             rdfs:label "ON" ;
             rdfs:comment "ON" ;
         ].
@@ -118,6 +119,7 @@ plug:UnisonDetune
 	a lv2:Parameter ;
 	rdfs:label "Unison Detune" ;
 	rdfs:range atom:Float ;
+	rdfs:comment "This detunes the oscillators relative to each other to thicken the sound and add stereo width." ;
 	lv2:default 0.25 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -151,9 +153,19 @@ plug:NotePriority
 	a lv2:Parameter ;
 	rdfs:label "Note Priority" ;
 	rdfs:range atom:Float ;
+	rdfs:comment "Switches the priority of voice allocation from the default lowest-note priority to last-played-note." ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 2 .
+	lv2:maximum 2 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:Osc1Pitch
 	a lv2:Parameter ;
@@ -183,38 +195,79 @@ plug:Osc1SawWave
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Saw Wave" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Sawtooth wave button. A ramped pulse-wave is achieved by selecting both sawtooth and pulse options. When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:Osc1PulseWave
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Pulse Wave" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:Osc2SawWave
 	a lv2:Parameter ;
 	rdfs:label "Osc 2 Saw Wave" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Sawtooth wave button. A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined. When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:Osc2PulseWave
 	a lv2:Parameter ;
 	rdfs:label "Osc 2 Pulse Wave" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:OscPW
 	a lv2:Parameter ;
 	rdfs:label "Osc Pulsewidth" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Adjusts the pulse width of the selected pulse wave oscillators (OSC1 and or OSC2)" ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -231,6 +284,7 @@ plug:EnvToPitchAmount
 	a lv2:Parameter ;
 	rdfs:label "Filter Env to Pitch" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "The amount of pitch detuning from OSC2 controlled by the filter envelope. " ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 36 .
@@ -241,7 +295,16 @@ plug:EnvToPitchBothOscs
 	rdfs:range atom:Float ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:EnvToPitchInvert
 	a lv2:Parameter ;
@@ -249,12 +312,22 @@ plug:EnvToPitchInvert
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:EnvToPWAmount
 	a lv2:Parameter ;
 	rdfs:label "Filter Env to PW" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "The amount of pulse width from OSC2 controlled by the filter envelope. " ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -265,7 +338,16 @@ plug:EnvToPWBothOscs
 	rdfs:range atom:Float ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:EnvToPWInvert
 	a lv2:Parameter ;
@@ -273,12 +355,22 @@ plug:EnvToPWInvert
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:OscCrossmod
 	a lv2:Parameter ;
 	rdfs:label "Cross Modulation" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "cross modulation, with Oscillator 1 modulating Oscillator 2 (Frequency Modulation)" ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -287,14 +379,25 @@ plug:OscSync
 	a lv2:Parameter ;
 	rdfs:label "Osc Sync" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Synchronises the +/- oscillations of both OSC1 and OSC2 resulting in a narrower, more precise tone" ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:OscBrightness
 	a lv2:Parameter ;
 	rdfs:label "Osc Brightness" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "adjusts the clarity of higher harmonics" ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -337,7 +440,20 @@ plug:NoiseColor
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 2 .
+	lv2:maximum 2 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "WHITE" ;
+            rdfs:comment "White noise" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "PINK" ;
+            rdfs:comment "Pink noise" ;
+		], [
+            rdf:value 2 ;
+            rdfs:label "BROWN" ;
+            rdfs:comment "Brown noise" ;
+        ].
 
 plug:PitchBendUp
 	a lv2:Parameter ;
@@ -403,9 +519,19 @@ plug:Filter4PoleMode
 	a lv2:Parameter ;
 	rdfs:label "Filter 4-Pole Mode" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "This mode is only low-pass, but the MODE control now allows you to smoothly change the depth of the filter slope from 24dB/octave on the complete left, down to 6 dB/octave on the complete right." ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:FilterCutoff
 	a lv2:Parameter ;
@@ -427,6 +553,7 @@ plug:FilterEnvAmount
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Amount" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "The amount of opening/closing of the filter (ADSR filter envelope) " ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -435,6 +562,7 @@ plug:FilterKeyFollow
 	a lv2:Parameter ;
 	rdfs:label "Filter Keytrack" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Key-follow or keyboard-tracking, i.e. the filter is less intrusive on higher pitches" ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -443,6 +571,7 @@ plug:FilterMode
 	a lv2:Parameter ;
 	rdfs:label "Filter Mode" ;
 	rdfs:range atom:Float ;
+    rdfs:comment "Allows you to morph the filter shape (as opposed to switch) between LPF (far left), Notch (centered) (default setting), and HPF (far right)" ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
