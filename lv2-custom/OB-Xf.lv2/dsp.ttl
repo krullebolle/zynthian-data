@@ -20,6 +20,7 @@
 @prefix urid:  <http://lv2plug.in/ns/ext/urid#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
+#master group
 plug:Volume
 	a lv2:Parameter ;
 	rdfs:label "Volume" ;
@@ -46,6 +47,7 @@ plug:Tune
 	lv2:maximum 100 ;
     rdfs:comment "Fine tuning the overall pitch in cents" .
 
+#Global group
 plug:Polyphony
 	a lv2:Parameter ;
 	rdfs:label "Polyphony" ;
@@ -167,6 +169,7 @@ plug:NotePriority
             rdfs:comment "ON" ;
         ].
 
+# Oscillator group
 plug:Osc1Pitch
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Pitch" ;
@@ -402,6 +405,7 @@ plug:OscBrightness
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
 
+#Mixer group
 plug:Osc1Mix
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Volume" ;
@@ -455,6 +459,8 @@ plug:NoiseColor
             rdfs:comment "Brown noise" ;
         ].
 
+
+# control group
 plug:PitchBendUp
 	a lv2:Parameter ;
 	rdfs:label "Pitch Bend Up" ;
@@ -515,6 +521,7 @@ plug:VibratoRate
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
 
+#filtergroup
 plug:Filter4PoleMode
 	a lv2:Parameter ;
 	rdfs:label "Filter 4-Pole Mode" ;
@@ -582,7 +589,16 @@ plug:Filter2PoleBPBlend
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:Filter2PolePush
 	a lv2:Parameter ;
@@ -590,7 +606,16 @@ plug:Filter2PolePush
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:Filter4PoleXpander
 	a lv2:Parameter ;
@@ -598,7 +623,16 @@ plug:Filter4PoleXpander
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 .
+	lv2:maximum 1 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "OFF" ;
+            rdfs:comment "OFF" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "ON" ;
+            rdfs:comment "ON" ;
+        ].
 
 plug:FilterXpanderMode
 	a lv2:Parameter ;
@@ -606,8 +640,70 @@ plug:FilterXpanderMode
 	rdfs:range atom:Float ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 14 .
+	lv2:maximum 14 ;
+	lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "LP4" ;
+            rdfs:comment "LP4" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "LP3" ;
+            rdfs:comment "LP3" ;
+        ], [
+		 	rdf:value 2 ;
+            rdfs:label "LP2" ;
+            rdfs:comment "LP2" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "LP1" ;
+            rdfs:comment "LP1" ;
+        ], [
+		   rdf:value 4 ;
+            rdfs:label "HP3" ;
+            rdfs:comment "HP3" ;
+        ], [
+            rdf:value 5 ;
+            rdfs:label "HP2" ;
+            rdfs:comment "HP2" ;
+        ], [
+		 	rdf:value 6 ;
+            rdfs:label "HP1" ;
+            rdfs:comment "HP1" ;
+        ], [
+            rdf:value 7 ;
+            rdfs:label "BP4" ;
+            rdfs:comment "BP4" ;
+        ], [
+		   rdf:value 8 ;
+            rdfs:label "BP2" ;
+            rdfs:comment "BP2" ;
+        ], [
+            rdf:value 9 ;
+            rdfs:label "N2" ;
+            rdfs:comment "N2" ;
+        ], [
+		 	rdf:value 10 ;
+            rdfs:label "PH3" ;
+            rdfs:comment "PH3" ;
+        ], [
+            rdf:value 11 ;
+            rdfs:label "HP2+LP1" ;
+            rdfs:comment "HP2+LP1" ;
+        ], [
+			rdf:value 12 ;
+            rdfs:label "HP3+LP1" ;
+            rdfs:comment "HP3+LP1" ;
+        ], [
+            rdf:value 13 ;
+            rdfs:label "N2+LP1" ;
+            rdfs:comment "N2+LP1" ;
+        ], [
+			rdf:value 14 ;
+            rdfs:label "PH3+LP1" ;
+            rdfs:comment "PH3+LP1" ;
+        ].
 
+#LFO group
 plug:LFO1TempoSync
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Tempo Sync" ;
