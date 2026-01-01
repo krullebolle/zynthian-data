@@ -1579,6 +1579,12 @@ plug:GROUP9
 	lv2:symbol "group9" ;
 	lv2:displayPriority 5 .
 
+plug:GROUP19
+	a pg:ControlGroup;
+	lv2:name "Filter 4-pole mode" ;
+	lv2:symbol "group19" ;
+	lv2:displayPriority 5 .
+
 plug:GROUP10
 	a pg:ControlGroup, pg:ControlGroup;
 	lv2:name "Filter Env" ;
