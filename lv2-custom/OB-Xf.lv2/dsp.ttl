@@ -58,6 +58,8 @@ plug:Polyphony
 	a lv2:Parameter ;
 	rdfs:label "Polyphony" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 8 ;
 	lv2:default 8 ;
 	lv2:minimum 1 ;
 	lv2:maximum 32 .
@@ -67,6 +69,8 @@ plug:HQMode
 	rdfs:label "High Quality Mode" ;
 	rdfs:range atom:Float ;
 	rdfs:comment "THigh Quality mode at the expense of CPU consumption." ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -84,6 +88,8 @@ plug:UnisonVoices
 	a lv2:Parameter ;
 	rdfs:label "Unison Voices" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 3 ;
 	lv2:default 8 ;
 	lv2:minimum 1 ;
 	lv2:maximum 32 .
@@ -92,6 +98,8 @@ plug:Portamento
 	a lv2:Parameter ;
 	rdfs:label "Portamento" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 6 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -110,6 +118,8 @@ plug:Unison
 	rdfs:label "Unison" ;
 	rdfs:range atom:Float ;
 	rdfs:comment "Single-note mode that stacks all the voices available. Spread and Voice Panning are assets in this mode" ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -128,6 +138,8 @@ plug:UnisonDetune
 	rdfs:label "Unison Detune" ;
 	rdfs:range atom:Float ;
 	rdfs:comment "This detunes the oscillators relative to each other to thicken the sound and add stereo width." ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0.25 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -136,6 +148,8 @@ plug:EnvLegatoMode
 	a lv2:Parameter ;
 	rdfs:label "Envelope Legato Mode" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 3 ;
@@ -162,6 +176,8 @@ plug:NotePriority
 	rdfs:label "Note Priority" ;
 	rdfs:range atom:Float ;
 	rdfs:comment "Switches the priority of voice allocation from the default lowest-note priority to last-played-note." ;
+	pg:group plug:GROUP2 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -180,6 +196,8 @@ plug:Osc1Pitch
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP6 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum -24 ;
 	lv2:maximum 24 .
@@ -188,6 +206,8 @@ plug:Osc2Detune
 	a lv2:Parameter ;
 	rdfs:label "Osc 2 Detune" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 6 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -196,6 +216,8 @@ plug:Osc2Pitch
 	a lv2:Parameter ;
 	rdfs:label "Osc 2 Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum -24 ;
 	lv2:maximum 24 .
@@ -205,6 +227,8 @@ plug:Osc1SawWave
 	rdfs:label "Osc 1 Saw Wave" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Sawtooth wave button. A ramped pulse-wave is achieved by selecting both sawtooth and pulse options. When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
+	pg:group plug:GROUP6 ;
+	lv2:displayPriority 3 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -222,7 +246,9 @@ plug:Osc1PulseWave
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Pulse Wave" ;
 	rdfs:range atom:Float ;
-    rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
+    rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave.";
+	pg:group plug:GROUP6 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -241,6 +267,8 @@ plug:Osc2SawWave
 	rdfs:label "Osc 2 Saw Wave" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Sawtooth wave button. A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined. When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 5 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -259,6 +287,8 @@ plug:Osc2PulseWave
 	rdfs:label "Osc 2 Pulse Wave" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -277,6 +307,8 @@ plug:OscPW
 	rdfs:label "Osc Pulsewidth" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Adjusts the pulse width of the selected pulse wave oscillators (OSC1 and or OSC2)" ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -285,6 +317,8 @@ plug:Osc2PWOffset
 	a lv2:Parameter ;
 	rdfs:label "Osc 2 PW Offset" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -293,7 +327,9 @@ plug:EnvToPitchAmount
 	a lv2:Parameter ;
 	rdfs:label "Filter Env to Pitch" ;
 	rdfs:range atom:Float ;
-    rdfs:comment "The amount of pitch detuning from OSC2 controlled by the filter envelope. " ;
+    rdfs:comment "The amount of pitch detuning from OSC1 controlled by the filter envelope. " ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 36 .
@@ -302,6 +338,8 @@ plug:EnvToPitchBothOscs
 	a lv2:Parameter ;
 	rdfs:label "Filter Env to Both Osc Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 1 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -319,6 +357,8 @@ plug:EnvToPitchInvert
 	a lv2:Parameter ;
 	rdfs:label "Invert Filter Env to Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -337,6 +377,8 @@ plug:EnvToPWAmount
 	rdfs:label "Filter Env to PW" ;
 	rdfs:range atom:Float ;
     rdfs:comment "The amount of pulse width from OSC2 controlled by the filter envelope. " ;
+	pg:group plug:GROUP7 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -345,6 +387,8 @@ plug:EnvToPWBothOscs
 	a lv2:Parameter ;
 	rdfs:label "Filter Env to Both Osc PW" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 1 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -362,6 +406,8 @@ plug:EnvToPWInvert
 	a lv2:Parameter ;
 	rdfs:label "Invert Filter Env to PW" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -380,6 +426,8 @@ plug:OscCrossmod
 	rdfs:label "Cross Modulation" ;
 	rdfs:range atom:Float ;
     rdfs:comment "cross modulation, with Oscillator 1 modulating Oscillator 2 (Frequency Modulation)" ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -389,6 +437,8 @@ plug:OscSync
 	rdfs:label "Osc Sync" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Synchronises the +/- oscillations of both OSC1 and OSC2 resulting in a narrower, more precise tone" ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -407,6 +457,8 @@ plug:OscBrightness
 	rdfs:label "Osc Brightness" ;
 	rdfs:range atom:Float ;
     rdfs:comment "adjusts the clarity of higher harmonics" ;
+	pg:group plug:GROUP8 ;
+	lv2:displayPriority 4 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -416,6 +468,8 @@ plug:Osc1Mix
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Volume" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP14 ;
+	lv2:displayPriority 5 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -424,6 +478,8 @@ plug:Osc2Mix
 	a lv2:Parameter ;
 	rdfs:label "Osc 2 Volume" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP14 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -432,6 +488,8 @@ plug:RingModMix
 	a lv2:Parameter ;
 	rdfs:label "Ring Mod Volume" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP14 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -440,6 +498,8 @@ plug:NoiseMix
 	a lv2:Parameter ;
 	rdfs:label "Noise Volume" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP14 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -448,6 +508,8 @@ plug:NoiseColor
 	a lv2:Parameter ;
 	rdfs:label "Noise Color" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP14 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -471,6 +533,8 @@ plug:PitchBendUp
 	a lv2:Parameter ;
 	rdfs:label "Pitch Bend Up" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP15 ;
+	lv2:displayPriority 5 ;
 	lv2:default 2 ;
 	lv2:minimum 0 ;
 	lv2:maximum 48 ;
@@ -480,6 +544,8 @@ plug:PitchBendDown
 	a lv2:Parameter ;
 	rdfs:label "Pitch Bend Down" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP15 ;
+	lv2:displayPriority 4 ;
 	lv2:default 2 ;
 	lv2:minimum 0 ;
 	lv2:maximum 48 ;
@@ -489,6 +555,8 @@ plug:BendOsc2Only
 	a lv2:Parameter ;
 	rdfs:label "Pitch Bend Osc 2 Only" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP15 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -506,6 +574,8 @@ plug:VibratoWave
 	a lv2:Parameter ;
 	rdfs:label "Vibrato Wave" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP15 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -523,6 +593,8 @@ plug:VibratoRate
 	a lv2:Parameter ;
 	rdfs:label "Vibrato Rate" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP15 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0.3 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -714,6 +786,8 @@ plug:LFO1TempoSync
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Tempo Sync" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP3 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -1433,40 +1507,70 @@ plug:GROUP2
 	lv2:symbol "group2" ;
 	lv2:displayPriority 12 .
 
-plug:GROUP3
-	a pg:ControlGroup;
-	lv2:name "Mod LFO" ;
-	lv2:symbol "group3" ;
-	lv2:displayPriority 11 .
-
-plug:GROUP4
-	a pg:ControlGroup;
-	lv2:name "Mod Freq" ;
-	lv2:symbol "group4" ;
-	lv2:displayPriority 10 .
-
-plug:GROUP5
-	a pg:ControlGroup;
-	lv2:name "Mod Pulse Width" ;
-	lv2:symbol "group5" ;
-	lv2:displayPriority 9 .
-
 plug:GROUP6
 	a pg:ControlGroup;
 	lv2:name "Oscillator 1" ;
 	lv2:symbol "group6" ;
-	lv2:displayPriority 8 .
+	lv2:displayPriority 10 .
 
 plug:GROUP7
 	a pg:ControlGroup;
 	lv2:name "Oscillator 2" ;
 	lv2:symbol "group7" ;
-	lv2:displayPriority 7 .
+	lv2:displayPriority 10 .
 
 plug:GROUP8
 	a pg:ControlGroup;
 	lv2:name "Osc Common" ;
 	lv2:symbol "group8" ;
+	lv2:displayPriority 9 .
+
+plug:GROUP14
+	a pg:ControlGroup;
+	lv2:name "Mixer" ;
+	lv2:symbol "group14" ;
+	lv2:displayPriority 8 .
+
+plug:GROUP15
+	a pg:ControlGroup;
+	lv2:name "Control" ;
+	lv2:symbol "group15" ;
+	lv2:displayPriority 11 .
+
+plug:GROUP3
+	a pg:ControlGroup;
+	lv2:name "LFO1 Mod" ;
+	lv2:symbol "group3" ;
+	lv2:displayPriority 7 .
+
+plug:GROUP4
+	a pg:ControlGroup;
+	lv2:name "LFO1 Mod Freq" ;
+	lv2:symbol "group4" ;
+	lv2:displayPriority 7 .
+
+plug:GROUP5
+	a pg:ControlGroup;
+	lv2:name "LFO1 Mod Pulse Width" ;
+	lv2:symbol "group5" ;
+	lv2:displayPriority 7 .
+
+plug:GROUP16
+	a pg:ControlGroup;
+	lv2:name "LFO2 Mod" ;
+	lv2:symbol "group16" ;
+	lv2:displayPriority 6 .
+
+plug:GROUP17
+	a pg:ControlGroup;
+	lv2:name "LFO2 Mod Freq" ;
+	lv2:symbol "group17" ;
+	lv2:displayPriority 6 .
+
+plug:GROUP18
+	a pg:ControlGroup;
+	lv2:name "LFO2 Mod Pulse Width" ;
+	lv2:symbol "group18" ;
 	lv2:displayPriority 6 .
 
 plug:GROUP9
@@ -1498,6 +1602,8 @@ plug:GROUP13
 	lv2:name "Voice Panning" ;
 	lv2:symbol "group13" ;
 	lv2:displayPriority 1 .
+
+
 
 <urn:org.surge-synth-team.OB-Xf-rework>
 	ui:ui <urn:org.surge-synth-team.OB-Xf-rework:UI> ;
