@@ -807,7 +807,7 @@ plug:LFO1TempoSync
 	rdfs:label "LFO 1 Tempo Sync" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP3 ;
-	lv2:displayPriority 1 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -825,6 +825,8 @@ plug:LFO1Rate
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Rate" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP3 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0.5 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -833,6 +835,8 @@ plug:LFO1ModAmount1
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Mod 1 Amount" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP4 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -841,6 +845,8 @@ plug:LFO1ModAmount2
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Mod 2 Amount" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP5 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -849,6 +855,8 @@ plug:LFO1Wave1
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Wave 1" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP3 ;
+	lv2:displayPriority 8 ;
 	lv2:default -1 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -870,6 +878,8 @@ plug:LFO1Wave2
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Wave 2" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP3 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -891,6 +901,8 @@ plug:LFO1Wave3
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Wave 3" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP3 ;
+	lv2:displayPriority 6 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -912,6 +924,8 @@ plug:LFO1PW
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 PulseWidth" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP3 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -929,6 +943,8 @@ plug:LFO1ToOsc1Pitch
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 to Osc 1 Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP4 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -950,6 +966,8 @@ plug:LFO1ToOsc2Pitch
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 to Osc 2 Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP4 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -971,6 +989,8 @@ plug:LFO1ToFilterCutoff
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 to Filter Cutoff" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP4 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -992,6 +1012,8 @@ plug:LFO1ToOsc1PW
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 to Osc 1 PW" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP5 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1013,6 +1035,8 @@ plug:LFO1ToOsc2PW
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 to Osc 2 PW" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP5 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1034,6 +1058,8 @@ plug:LFO1ToVolume
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 to Volume" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP5 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1055,6 +1081,8 @@ plug:LFO2TempoSync
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 Tempo Sync" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP16 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -1072,6 +1100,8 @@ plug:LFO2Rate
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 Rate" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP16 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0.5 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1080,6 +1110,8 @@ plug:LFO2ModAmount1
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 Mod 1 Amount" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP17 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1088,6 +1120,8 @@ plug:LFO2ModAmount2
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 Mod 2 Amount" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP18 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1096,6 +1130,8 @@ plug:LFO2Wave1
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Wave 1" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP16 ;
+	lv2:displayPriority 9 ;
 	lv2:default -1 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -1117,6 +1153,8 @@ plug:LFO2Wave2
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Wave 2" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP16 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -1138,6 +1176,8 @@ plug:LFO2Wave3
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Wave 3" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP16 ;
+	lv2:displayPriority 6 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -1159,6 +1199,8 @@ plug:LFO2PW
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 Pulsewidth" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP16 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -1176,6 +1218,8 @@ plug:LFO2ToOsc1Pitch
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 to Osc 1 Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP17 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1197,6 +1241,8 @@ plug:LFO2ToOsc2Pitch
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 to Osc 2 Pitch" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP17 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1218,6 +1264,8 @@ plug:LFO2ToFilterCutoff
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 to Filter Cutoff" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP17 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1239,6 +1287,8 @@ plug:LFO2ToOsc1PW
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 to Osc 1 PW" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP18 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1260,6 +1310,8 @@ plug:LFO2ToOsc2PW
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 to Osc 2 PW" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP18 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1281,6 +1333,8 @@ plug:LFO2ToVolume
 	a lv2:Parameter ;
 	rdfs:label "LFO 2 to Volume" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP18 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1303,6 +1357,8 @@ plug:FilterEnvInvert
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Invert" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -1320,6 +1376,8 @@ plug:FilterEnvAttack
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Attack" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1328,6 +1386,8 @@ plug:FilterEnvDecay
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Decay" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1336,6 +1396,8 @@ plug:FilterEnvSustain
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Sustain" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 6 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1344,6 +1406,8 @@ plug:FilterEnvRelease
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Release" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1352,6 +1416,8 @@ plug:FilterEnvAttackCurve
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Attack Curve" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1360,6 +1426,8 @@ plug:VelToFilterEnv
 	a lv2:Parameter ;
 	rdfs:label "Velocity to Filter Env" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1369,6 +1437,8 @@ plug:AmpEnvAttack
 	a lv2:Parameter ;
 	rdfs:label "Amp Env Attack" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP11 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1377,6 +1447,8 @@ plug:AmpEnvDecay
 	a lv2:Parameter ;
 	rdfs:label "Amp Env Decay" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP11 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1385,6 +1457,8 @@ plug:AmpEnvSustain
 	a lv2:Parameter ;
 	rdfs:label "Amp Env Sustain" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP11 ;
+	lv2:displayPriority 6 ;
 	lv2:default 1 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1393,6 +1467,8 @@ plug:AmpEnvRelease
 	a lv2:Parameter ;
 	rdfs:label "Amp Env Release" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP11 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1401,6 +1477,8 @@ plug:AmpEnvAttackCurve
 	a lv2:Parameter ;
 	rdfs:label "Amp Env Attack Curve" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP11 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1409,6 +1487,8 @@ plug:VelToAmpEnv
 	a lv2:Parameter ;
 	rdfs:label "Velocity to Amp Env" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP11 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
