@@ -605,6 +605,8 @@ plug:Filter4PoleMode
 	rdfs:label "Filter 4-Pole Mode" ;
 	rdfs:range atom:Float ;
     rdfs:comment "This mode is only low-pass, but the MODE control now allows you to smoothly change the depth of the filter slope from 24dB/octave on the complete left, down to 6 dB/octave on the complete right." ;
+	pg:group plug:GROUP19 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -622,6 +624,8 @@ plug:FilterCutoff
 	a lv2:Parameter ;
 	rdfs:label "Filter Cutoff" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 10 ;
 	lv2:default 75 ;
 	lv2:minimum -45 ;
 	lv2:maximum 75 .
@@ -630,6 +634,8 @@ plug:FilterResonance
 	a lv2:Parameter ;
 	rdfs:label "Filter Resonance" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -639,6 +645,8 @@ plug:FilterEnvAmount
 	rdfs:label "Filter Env Amount" ;
 	rdfs:range atom:Float ;
     rdfs:comment "The amount of opening/closing of the filter (ADSR filter envelope) " ;
+	pg:group plug:GROUP10 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -648,6 +656,8 @@ plug:FilterKeyFollow
 	rdfs:label "Filter Keytrack" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Key-follow or keyboard-tracking, i.e. the filter is less intrusive on higher pitches" ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 1 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -657,6 +667,8 @@ plug:FilterMode
 	rdfs:label "Filter Mode" ;
 	rdfs:range atom:Float ;
     rdfs:comment "Allows you to morph the filter shape (as opposed to switch) between LPF (far left), Notch (centered) (default setting), and HPF (far right)" ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -665,6 +677,8 @@ plug:Filter2PoleBPBlend
 	a lv2:Parameter ;
 	rdfs:label "Filter 2-Pole BP Blend" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -682,6 +696,8 @@ plug:Filter2PolePush
 	a lv2:Parameter ;
 	rdfs:label "Filter 2-Pole Push" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -699,6 +715,8 @@ plug:Filter4PoleXpander
 	a lv2:Parameter ;
 	rdfs:label "Filter 4-Pole Xpander" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP19 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -716,6 +734,8 @@ plug:FilterXpanderMode
 	a lv2:Parameter ;
 	rdfs:label "Filter Xpander Mode" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP19 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 14 ;
