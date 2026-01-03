@@ -1498,6 +1498,8 @@ plug:PortamentoSlop
 	a lv2:Parameter ;
 	rdfs:label "Portamento Slope/Glide" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP12 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0.25 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1506,6 +1508,8 @@ plug:FilterSlop
 	a lv2:Parameter ;
 	rdfs:label "Filter Slope" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP12 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0.25 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1514,6 +1518,8 @@ plug:EnvelopeSlop
 	a lv2:Parameter ;
 	rdfs:label "Envelope Slopes" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP12 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0.25 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1522,6 +1528,8 @@ plug:LevelSlop
 	a lv2:Parameter ;
 	rdfs:label "Level Slopes" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP12 ;
+	lv2:displayPriority 2 ;
 	lv2:default 0.25 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -1530,6 +1538,8 @@ plug:PanVoice1
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 1" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 10 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1538,6 +1548,8 @@ plug:PanVoice2
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 2" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1546,6 +1558,8 @@ plug:PanVoice3
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 3" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1554,6 +1568,8 @@ plug:PanVoice4
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 4" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1562,6 +1578,8 @@ plug:PanVoice5
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 5" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 6 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1570,6 +1588,8 @@ plug:PanVoice6
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 6" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 5 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1578,6 +1598,8 @@ plug:PanVoice7
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 7" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 4 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
@@ -1586,6 +1608,8 @@ plug:PanVoice8
 	a lv2:Parameter ;
 	rdfs:label "Pan Voice 8" ;
 	rdfs:range atom:Float ;
+	pg:group plug:GROUP13 ;
+	lv2:displayPriority 3 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 .
