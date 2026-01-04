@@ -20,7 +20,6 @@
 @prefix urid:  <http://lv2plug.in/ns/ext/urid#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
-#master group
 plug:Volume
 	a lv2:Parameter ;
 	pg:group plug:GROUP1 ;
@@ -53,7 +52,6 @@ plug:Tune
 	lv2:maximum 100 ;
     rdfs:comment "Fine tuning the overall pitch in cents" .
 
-#Global group
 plug:Polyphony
 	a lv2:Parameter ;
 	rdfs:label "Polyphony" ;
@@ -191,7 +189,6 @@ plug:NotePriority
             rdfs:comment "ON" ;
         ].
 
-# Oscillator group
 plug:Osc1Pitch
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Pitch" ;
@@ -246,7 +243,7 @@ plug:Osc1PulseWave
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Pulse Wave" ;
 	rdfs:range atom:Float ;
-    rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave.";
+    rdfs:comment "Pulse Wave button (with adjustable pulse width - PW). A ramped pulse-wave is achieved by selecting both sawtooth and pulse options combined.  When neither sawtooth or pulse is selected, the OSC produces a triangle wave." ;
 	pg:group plug:GROUP6 ;
 	lv2:displayPriority 2 ;
 	lv2:default 0 ;
@@ -463,7 +460,6 @@ plug:OscBrightness
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
 
-#Mixer group
 plug:Osc1Mix
 	a lv2:Parameter ;
 	rdfs:label "Osc 1 Volume" ;
@@ -528,7 +524,6 @@ plug:NoiseColor
         ].
 
 
-# control group
 plug:PitchBendUp
 	a lv2:Parameter ;
 	rdfs:label "Pitch Bend Up" ;
@@ -599,7 +594,6 @@ plug:VibratoRate
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
 
-#filtergroup
 plug:Filter4PoleMode
 	a lv2:Parameter ;
 	rdfs:label "Filter 4-Pole Mode" ;
@@ -801,7 +795,6 @@ plug:FilterXpanderMode
             rdfs:comment "PH3+LP1" ;
         ].
 
-#LFO group
 plug:LFO1TempoSync
 	a lv2:Parameter ;
 	rdfs:label "LFO 1 Tempo Sync" ;
@@ -1352,7 +1345,6 @@ plug:LFO2ToVolume
             rdfs:comment "100%" ;
         ].
 
-#filter ADSR envelope group
 plug:FilterEnvInvert
 	a lv2:Parameter ;
 	rdfs:label "Filter Env Invert" ;
@@ -1432,7 +1424,6 @@ plug:VelToFilterEnv
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
 
-#AMP ADSR envelope group
 plug:AmpEnvAttack
 	a lv2:Parameter ;
 	rdfs:label "Amp Env Attack" ;
@@ -1493,7 +1484,6 @@ plug:VelToAmpEnv
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
 
-#Voice Variation group
 plug:PortamentoSlop
 	a lv2:Parameter ;
 	rdfs:label "Portamento Slope/Glide" ;
