@@ -1700,13 +1700,13 @@ plug:GROUP19
 	lv2:displayPriority 5 .
 
 plug:GROUP10
-	a pg:ControlGroup, pg:ControlGroup;
+	a pg:ControlGroup;
 	lv2:name "Filter Env" ;
 	lv2:symbol "group10" ;
 	lv2:displayPriority 4 .
 
 plug:GROUP11
-	a pg:ControlGroup, pg:ControlGroup;
+	a pg:ControlGroup;
 	lv2:name "Loudness Env" ;
 	lv2:symbol "group11" ;
 	lv2:displayPriority 3 .
