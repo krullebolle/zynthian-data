@@ -1121,7 +1121,7 @@ plug:LFO2ModAmount2
 
 plug:LFO2Wave1
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Wave 1" ;
+	rdfs:label "LFO 2 Wave 1" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 9 ;
@@ -1144,7 +1144,7 @@ plug:LFO2Wave1
 
 plug:LFO2Wave2
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Wave 2" ;
+	rdfs:label "LFO 2 Wave 2" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 8 ;
@@ -1167,7 +1167,7 @@ plug:LFO2Wave2
 
 plug:LFO2Wave3
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Wave 3" ;
+	rdfs:label "LFO 2 Wave 3" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 6 ;
@@ -1178,11 +1178,13 @@ plug:LFO2Wave3
             rdf:value -1 ;
             rdfs:label "SAMPLE&HOLD" ;
             rdfs:comment "SAMPLE&HOLD" ;
-        ], [
+        ];
+	lv2:scalepoint [
             rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
-        ], [
+        ];
+	lv2:scalepoint [
             rdf:value 1 ;
             rdfs:label "SAMPLE&GLIDE" ;
             rdfs:comment "SAMPLE&GLIDE" ;
@@ -1613,79 +1615,79 @@ plug:GROUP1
 	a pg:ControlGroup;
 	lv2:name "Master" ;
 	lv2:symbol "group1" ;
-	lv2:displayPriority 13 .
+	lv2:displayPriority 18 .
 
 plug:GROUP2
 	a pg:ControlGroup;
 	lv2:name "Global Control" ;
 	lv2:symbol "group2" ;
-	lv2:displayPriority 12 .
+	lv2:displayPriority 17 .
 
 plug:GROUP6
 	a pg:ControlGroup;
 	lv2:name "Oscillator 1" ;
 	lv2:symbol "group6" ;
-	lv2:displayPriority 10 .
+	lv2:displayPriority 15 .
 
 plug:GROUP7
 	a pg:ControlGroup;
 	lv2:name "Oscillator 2" ;
 	lv2:symbol "group7" ;
-	lv2:displayPriority 10 .
+	lv2:displayPriority 14 .
 
 plug:GROUP8
 	a pg:ControlGroup;
 	lv2:name "Osc Common" ;
 	lv2:symbol "group8" ;
-	lv2:displayPriority 9 .
+	lv2:displayPriority 13 .
 
 plug:GROUP14
 	a pg:ControlGroup;
 	lv2:name "Mixer" ;
 	lv2:symbol "group14" ;
-	lv2:displayPriority 8 .
+	lv2:displayPriority 12 .
 
 plug:GROUP15
 	a pg:ControlGroup;
 	lv2:name "Control" ;
 	lv2:symbol "group15" ;
-	lv2:displayPriority 11 .
+	lv2:displayPriority 16 .
 
 plug:GROUP3
 	a pg:ControlGroup;
-	lv2:name "LFO1 Mod" ;
+	lv2:name "LFO1 Mod (=global for all voices)" ;
 	lv2:symbol "group3" ;
-	lv2:displayPriority 7 .
+	lv2:displayPriority 11 .
 
 plug:GROUP4
 	a pg:ControlGroup;
 	lv2:name "LFO1 Mod Freq" ;
 	lv2:symbol "group4" ;
-	lv2:displayPriority 7 .
+	lv2:displayPriority 10 .
 
 plug:GROUP5
 	a pg:ControlGroup;
 	lv2:name "LFO1 Mod Pulse Width" ;
 	lv2:symbol "group5" ;
-	lv2:displayPriority 7 .
+	lv2:displayPriority 10 .
 
 plug:GROUP16
 	a pg:ControlGroup;
-	lv2:name "LFO2 Mod" ;
+	lv2:name "LFO2 Mod (=per voice)" ;
 	lv2:symbol "group16" ;
-	lv2:displayPriority 6 .
+	lv2:displayPriority 9 .
 
 plug:GROUP17
 	a pg:ControlGroup;
 	lv2:name "LFO2 Mod Freq" ;
 	lv2:symbol "group17" ;
-	lv2:displayPriority 6 .
+	lv2:displayPriority 8 .
 
 plug:GROUP18
 	a pg:ControlGroup;
 	lv2:name "LFO2 Mod Pulse Width" ;
 	lv2:symbol "group18" ;
-	lv2:displayPriority 6 .
+	lv2:displayPriority 8 .
 
 plug:GROUP9
 	a pg:ControlGroup;
