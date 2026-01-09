@@ -94,22 +94,13 @@ plug:UnisonVoices
 
 plug:Portamento
 	a lv2:Parameter ;
-	rdfs:label "Portamento" ;
+	rdfs:label "Portamento or Glide" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP2 ;
 	lv2:displayPriority 6 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
-	lv2:maximum 1 ;
-	lv2:scalePoint [
-            rdf:value 0.0 ;
-            rdfs:label "OFF" ;
-            rdfs:comment "OFF" ;
-        ], [
-            rdf:value 1.0 ;
-            rdfs:label "ON" ;
-            rdfs:comment "ON" ;
-        ] .
+	lv2:maximum 1 .
 
 plug:Unison
 	a lv2:Parameter ;
@@ -181,11 +172,15 @@ plug:NotePriority
 	lv2:maximum 2 ;
 	lv2:scalePoint [
             rdf:value 0 ;
-            rdfs:label "OFF" ;
+            rdfs:label "Last-played" ;
             rdfs:comment "OFF" ;
         ], [
             rdf:value 1 ;
-            rdfs:label "ON" ;
+            rdfs:label "Lowest-Note" ;
+            rdfs:comment "ON" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Highest-Note" ;
             rdfs:comment "ON" ;
         ].
 
@@ -322,7 +317,7 @@ plug:Osc2PWOffset
 
 plug:EnvToPitchAmount
 	a lv2:Parameter ;
-	rdfs:label "Filter Env to Pitch" ;
+	rdfs:label "Amt pitch detuning OSC1 controlled by filtr env" ;
 	rdfs:range atom:Float ;
     rdfs:comment "The amount of pitch detuning from OSC1 controlled by the filter envelope. " ;
 	pg:group plug:GROUP7 ;
@@ -599,8 +594,8 @@ plug:Filter4PoleMode
 	rdfs:label "Filter 4-Pole Mode" ;
 	rdfs:range atom:Float ;
     rdfs:comment "This mode is only low-pass, but the MODE control now allows you to smoothly change the depth of the filter slope from 24dB/octave on the complete left, down to 6 dB/octave on the complete right." ;
-	pg:group plug:GROUP19 ;
-	lv2:displayPriority 3 ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 11 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 ;
@@ -639,8 +634,8 @@ plug:FilterEnvAmount
 	rdfs:label "Filter Env Amount" ;
 	rdfs:range atom:Float ;
     rdfs:comment "The amount of opening/closing of the filter (ADSR filter envelope) " ;
-	pg:group plug:GROUP10 ;
-	lv2:displayPriority 10 ;
+	pg:group plug:GROUP9 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -662,7 +657,7 @@ plug:FilterMode
 	rdfs:range atom:Float ;
     rdfs:comment "Allows you to morph the filter shape (as opposed to switch) between LPF (far left), Notch (centered) (default setting), and HPF (far right)" ;
 	pg:group plug:GROUP9 ;
-	lv2:displayPriority 5 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 1 .
@@ -726,7 +721,7 @@ plug:Filter4PoleXpander
 
 plug:FilterXpanderMode
 	a lv2:Parameter ;
-	rdfs:label "Filter Xpander Mode" ;
+	rdfs:label "Filter 4-pole Xpander Mode" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP19 ;
 	lv2:displayPriority 2 ;
@@ -826,7 +821,7 @@ plug:LFO1Rate
 
 plug:LFO1ModAmount1
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Mod 1 Amount" ;
+	rdfs:label "LFO 1 Mod1 Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP4 ;
 	lv2:displayPriority 10 ;
@@ -836,7 +831,7 @@ plug:LFO1ModAmount1
 
 plug:LFO1ModAmount2
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Mod 2 Amount" ;
+	rdfs:label "LFO 1 Mod2 Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP5 ;
 	lv2:displayPriority 10 ;
@@ -846,10 +841,10 @@ plug:LFO1ModAmount2
 
 plug:LFO1Wave1
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Wave 1" ;
+	rdfs:label "LFO 1 Wave1 Left:Sine Right:Triang" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP3 ;
-	lv2:displayPriority 8 ;
+	lv2:displayPriority 9 ;
 	lv2:default -1 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -857,11 +852,13 @@ plug:LFO1Wave1
             rdf:value -1 ;
             rdfs:label "SINE" ;
             rdfs:comment "SINE" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 1 ;
             rdfs:label "TRIANGLE" ;
             rdfs:comment "TRIANGLE" ;
@@ -869,10 +866,10 @@ plug:LFO1Wave1
 
 plug:LFO1Wave2
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Wave 2" ;
+	rdfs:label "LFO 1 Wave2 Left:Pulse Right:Saw" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP3 ;
-	lv2:displayPriority 7 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum -1 ;
 	lv2:maximum 1 ;
@@ -880,11 +877,13 @@ plug:LFO1Wave2
             rdf:value -1 ;
             rdfs:label "PULSE" ;
             rdfs:comment "PULSE" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 1 ;
             rdfs:label "SAWTOOTH" ;
             rdfs:comment "SAWTOOTH" ;
@@ -892,7 +891,7 @@ plug:LFO1Wave2
 
 plug:LFO1Wave3
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 Wave 3" ;
+	rdfs:label "LFO 1 Wave3 Left:S&H Right:S&G" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP3 ;
 	lv2:displayPriority 6 ;
@@ -903,11 +902,13 @@ plug:LFO1Wave3
             rdf:value -1 ;
             rdfs:label "SAMPLE&HOLD" ;
             rdfs:comment "SAMPLE&HOLD" ;
-        ], [
+        ];
+	lv2:scalepoint [
             rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
-        ], [
+        ];
+	lv2:scalepoint [
             rdf:value 1 ;
             rdfs:label "SAMPLE&GLIDE" ;
             rdfs:comment "SAMPLE&GLIDE" ;
@@ -915,7 +916,7 @@ plug:LFO1Wave3
 
 plug:LFO1PW
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 PulseWidth" ;
+	rdfs:label "LFO 1 Pulsewidth 50%_to_95%" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP3 ;
 	lv2:displayPriority 7 ;
@@ -926,7 +927,8 @@ plug:LFO1PW
             rdf:value 0 ;
             rdfs:label "50%" ;
             rdfs:comment "50%" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 1 ;
             rdfs:label "95%" ;
             rdfs:comment "95%" ;
@@ -934,10 +936,10 @@ plug:LFO1PW
 
 plug:LFO1ToOsc1Pitch
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 to Osc 1 Pitch" ;
+	rdfs:label "LFO 1 to Osc1 Pitch Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP4 ;
-	lv2:displayPriority 3 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -957,10 +959,10 @@ plug:LFO1ToOsc1Pitch
 
 plug:LFO1ToOsc2Pitch
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 to Osc 2 Pitch" ;
+	rdfs:label "LFO 1 to Osc2 Pitch Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP4 ;
-	lv2:displayPriority 2 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -980,10 +982,10 @@ plug:LFO1ToOsc2Pitch
 
 plug:LFO1ToFilterCutoff
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 to Filter Cutoff" ;
+	rdfs:label "LFO 1 to Filter Cutoff Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP4 ;
-	lv2:displayPriority 1 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1003,10 +1005,10 @@ plug:LFO1ToFilterCutoff
 
 plug:LFO1ToOsc1PW
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 to Osc 1 PW" ;
+	rdfs:label "LFO 1 to Osc 1 PW Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP5 ;
-	lv2:displayPriority 5 ;
+	lv2:displayPriority 9 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1026,10 +1028,10 @@ plug:LFO1ToOsc1PW
 
 plug:LFO1ToOsc2PW
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 to Osc 2 PW" ;
+	rdfs:label "LFO 1 to Osc 2 PW Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP5 ;
-	lv2:displayPriority 4 ;
+	lv2:displayPriority 8 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1049,10 +1051,10 @@ plug:LFO1ToOsc2PW
 
 plug:LFO1ToVolume
 	a lv2:Parameter ;
-	rdfs:label "LFO 1 to Volume" ;
+	rdfs:label "LFO 1 to Master Volume (tremolo)" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP5 ;
-	lv2:displayPriority 1 ;
+	lv2:displayPriority 7 ;
 	lv2:default 0 ;
 	lv2:minimum 0 ;
 	lv2:maximum 2 ;
@@ -1101,7 +1103,7 @@ plug:LFO2Rate
 
 plug:LFO2ModAmount1
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 Mod 1 Amount" ;
+	rdfs:label "LFO 2 Mod1 Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP17 ;
 	lv2:displayPriority 10 ;
@@ -1111,7 +1113,7 @@ plug:LFO2ModAmount1
 
 plug:LFO2ModAmount2
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 Mod 2 Amount" ;
+	rdfs:label "LFO 2 Mod2 Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP18 ;
 	lv2:displayPriority 10 ;
@@ -1121,7 +1123,7 @@ plug:LFO2ModAmount2
 
 plug:LFO2Wave1
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 Wave 1" ;
+	rdfs:label "LFO 2 Wave1 Left:Sine Right:Triang" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 9 ;
@@ -1132,11 +1134,13 @@ plug:LFO2Wave1
             rdf:value -1 ;
             rdfs:label "SINE" ;
             rdfs:comment "SINE" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 1 ;
             rdfs:label "TRIANGLE" ;
             rdfs:comment "TRIANGLE" ;
@@ -1144,7 +1148,7 @@ plug:LFO2Wave1
 
 plug:LFO2Wave2
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 Wave 2" ;
+	rdfs:label "LFO 2 Wave2 Left:Pulse Right:Saw" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 8 ;
@@ -1155,11 +1159,13 @@ plug:LFO2Wave2
             rdf:value -1 ;
             rdfs:label "PULSE" ;
             rdfs:comment "PULSE" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 0 ;
             rdfs:label "OFF" ;
             rdfs:comment "OFF" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 1 ;
             rdfs:label "SAWTOOTH" ;
             rdfs:comment "SAWTOOTH" ;
@@ -1167,7 +1173,7 @@ plug:LFO2Wave2
 
 plug:LFO2Wave3
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 Wave 3" ;
+	rdfs:label "LFO 2 Wave3 Left:S&H Right:S&G" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 6 ;
@@ -1192,7 +1198,7 @@ plug:LFO2Wave3
 
 plug:LFO2PW
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 Pulsewidth" ;
+	rdfs:label "LFO 2 Pulsewidth 50%_to_95%" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP16 ;
 	lv2:displayPriority 7 ;
@@ -1203,7 +1209,8 @@ plug:LFO2PW
             rdf:value 0 ;
             rdfs:label "50%" ;
             rdfs:comment "50%" ;
-        ], [
+        ];
+	lv2:scalePoint [
             rdf:value 1 ;
             rdfs:label "95%" ;
             rdfs:comment "95%" ;
@@ -1211,7 +1218,7 @@ plug:LFO2PW
 
 plug:LFO2ToOsc1Pitch
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 to Osc 1 Pitch" ;
+	rdfs:label "LFO 2 to Osc1 Pitch Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP17 ;
 	lv2:displayPriority 9 ;
@@ -1234,7 +1241,7 @@ plug:LFO2ToOsc1Pitch
 
 plug:LFO2ToOsc2Pitch
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 to Osc 2 Pitch" ;
+	rdfs:label "LFO 2 to Osc2 Pitch Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP17 ;
 	lv2:displayPriority 8 ;
@@ -1257,7 +1264,7 @@ plug:LFO2ToOsc2Pitch
 
 plug:LFO2ToFilterCutoff
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 to Filter Cutoff" ;
+	rdfs:label "LFO 2 to Filter Cutoff Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP17 ;
 	lv2:displayPriority 7 ;
@@ -1280,7 +1287,7 @@ plug:LFO2ToFilterCutoff
 
 plug:LFO2ToOsc1PW
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 to Osc 1 PW" ;
+	rdfs:label "LFO 2 to Osc 1 PW Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP18 ;
 	lv2:displayPriority 9 ;
@@ -1303,7 +1310,7 @@ plug:LFO2ToOsc1PW
 
 plug:LFO2ToOsc2PW
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 to Osc 2 PW" ;
+	rdfs:label "LFO 2 to Osc 2 PW Amount" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP18 ;
 	lv2:displayPriority 8 ;
@@ -1326,7 +1333,7 @@ plug:LFO2ToOsc2PW
 
 plug:LFO2ToVolume
 	a lv2:Parameter ;
-	rdfs:label "LFO 2 to Volume" ;
+	rdfs:label "LFO 2 to Master Volume (tremolo)" ;
 	rdfs:range atom:Float ;
 	pg:group plug:GROUP18 ;
 	lv2:displayPriority 7 ;
@@ -1655,37 +1662,37 @@ plug:GROUP15
 
 plug:GROUP3
 	a pg:ControlGroup;
-	lv2:name "LFO1 Mod (=global for all voices)" ;
+	lv2:name "LFO1 Setup (=global for all voices)" ;
 	lv2:symbol "group3" ;
 	lv2:displayPriority 11 .
 
 plug:GROUP4
 	a pg:ControlGroup;
-	lv2:name "LFO1 Mod Freq" ;
+	lv2:name "LFO1 Mod1 Pitch or Filter" ;
 	lv2:symbol "group4" ;
 	lv2:displayPriority 10 .
 
 plug:GROUP5
 	a pg:ControlGroup;
-	lv2:name "LFO1 Mod Pulse Width" ;
+	lv2:name "LFO1 Mod2 PulseWidth or Master Vol" ;
 	lv2:symbol "group5" ;
 	lv2:displayPriority 10 .
 
 plug:GROUP16
 	a pg:ControlGroup;
-	lv2:name "LFO2 Mod (=per voice)" ;
+	lv2:name "LFO2 Setup (=per voice)" ;
 	lv2:symbol "group16" ;
 	lv2:displayPriority 9 .
 
 plug:GROUP17
 	a pg:ControlGroup;
-	lv2:name "LFO2 Mod Freq" ;
+	lv2:name "LFO2 Mod1 Pitch or Filter" ;
 	lv2:symbol "group17" ;
 	lv2:displayPriority 8 .
 
 plug:GROUP18
 	a pg:ControlGroup;
-	lv2:name "LFO2 Mod Pulse Width" ;
+	lv2:name "LFO2 Mod2 PulseWidth or Master Vol" ;
 	lv2:symbol "group18" ;
 	lv2:displayPriority 8 .
 
@@ -1697,7 +1704,7 @@ plug:GROUP9
 
 plug:GROUP19
 	a pg:ControlGroup;
-	lv2:name "Filter 4-pole mode" ;
+	lv2:name "Filter 4-pole expander mode" ;
 	lv2:symbol "group19" ;
 	lv2:displayPriority 5 .
 
